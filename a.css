@@ -67,3 +67,8 @@ a{
 }
 
 
+.banner{
+    height: 515px;
+    background-image: url(./img/rs-cover.jpg);
+    border: 1px solid red;
+}
