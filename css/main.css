@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 .topNavBar .logo .rs{ color: #e06567; margin-right: 4px; }
 .topNavBar .logo .card{ color: #9A9DA2; }
 
-.banner{ height: 515px; background-image: url(./img/rs-cover.jpg); background-position: center center; /* 图片尺寸自适应 */ background-size: cover; }
+.banner{ height: 515px; background-image: url(../img/rs-cover.jpg); background-position: center center; /* 图片尺寸自适应 */ background-size: cover; }
 .banner .mask{ /* 宽度自适应 */ height: 515px; background-color:rgb(0,0,0,0.8); }
 
 .userCard{ /* 自适应 比固定width好 */ max-width: 928px; /* div水平居中 */ margin-left: auto; margin-right: auto; background-color: #FFFFFF; box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5); }
