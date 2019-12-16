@@ -68,7 +68,7 @@
 			justify-content: center;
 			align-items: center;
 			background: #888;
-			z-index: 1;
+			z-index: 2;
 		}
 
 		.site-welcome.active {
@@ -81,24 +81,34 @@
 	<div class="site-welcome active" id="siteWelcome">
 		<div class="loading"></div>
 	</div>
-	<div class="topNavBar">
+	<div id='topNavBar' class="topNavBar">
 		<div class="topNavBar-inner clearfix">
 			<a class="logo" href="#" alt="logo" style="float: left;">
 				<span class="rs">RS</span><span class="card">card</span>
 			</a>
-			<nav style="float: right;">
+			<nav class='menu' style="float: right;">
 				<ul class="clearfix">
 					<li>
-						<a href="#">关于</a>
+						<a href="#siteAbout">关于</a>
 					</li>
 					<li>
-						<a href="#">技能</a>
+						<a href="#siteSkills">技能</a>
 					</li>
 					<li>
-						<a href="#">作品</a>
+						<a href="#siteWorks">作品</a>
+						<ul class="submenu">
+							<li>作品1</li>
+							<li>作品2</li>
+							<li>作品3</li>
+						</ul>
 					</li>
 					<li>
 						<a href="#">博客</a>
+						<ul class="submenu">
+							<li>博客1</li>
+							<li>博客2</li>
+							<li>博客3</li>
+						</ul>
 					</li>
 					<li>
 						<a href="#">日历</a>
@@ -117,7 +127,7 @@
 		<div class="mask"></div>
 	</div>
 	<main>
-		<div class="userCard">
+		<div data-menu id='siteAbout' class="userCard">
 			<div class="pictureAndText clearfix">
 				<div class="picture">
 					<img src="../img/avatar.jpg" width=299 height=347 alt="头像" />
@@ -168,7 +178,7 @@
 			技能：Java开发、正在学习前端开发
 		</p>
 	</main>
-	<section class="skills">
+	<section data-menu id='siteSkills' class="skills">
 		<h2>技能</h2>
 		<ol class="clearfix">
 			<li>
@@ -216,7 +226,7 @@
 			</li>
 		</ol>
 	</section>
-	<section class="portfolio">
+	<section data-menu id='siteWorks' class="portfolio">
 		<h2>作品集</h2>
 		<nav>
 			<ol class="clearfix">
@@ -255,9 +265,8 @@
 			</div>
 		</div>
 	</section>
-	<script>
-		siteWelcome.classList.remove('active')
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 
 </html>
