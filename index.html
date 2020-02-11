@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>我的简历主页</title>
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="./css/main.css">
 	<script src="//at.alicdn.com/t/font_1516561_scq6j4wqot.js"></script>
 	<style type="text/css">
@@ -249,7 +250,7 @@
 				portfolioBar.className = 'bar state-3'
 			}
 		</script>
-		<div class="works">
+		<!-- <div class="works">
 			<div>
 				<div class="big">
 					<img src="./img/work_1.jpg" alt="作品1">
@@ -262,10 +263,30 @@
 				<div class="small-2">
 					<img src="./img/work_3.jpg" alt="作品3">
 				</div>
-			</div>
+			</div> -->
+			<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+			<img src="./img/nav.png" alt="作品1">
+		</div>
+        <div class="swiper-slide">
+			<img src="./img/canvas.jpg" alt="作品2">
+		</div>
+        <div class="swiper-slide">
+			<img src="./img/work_1.jpg" alt="作品2">
+		</div>
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
 		</div>
 	</section>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 
