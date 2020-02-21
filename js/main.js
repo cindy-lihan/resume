@@ -55,24 +55,8 @@ for (let i = 0; i < aTags.length; i++) {
         let href = aTag.getAttribute('href')  //#siteAbout
         let element = document.querySelector(href)
         let top = element.offsetTop
-        // 无动画效果的滑动到制定位置
-        // window.scrollTo(0,top -80)
-        // 添加动画效果
-        // let n = 20 //移动次数
-        // let duration = 500 / n //多少时间间隔移动一次
         let currentY = window.scrollY   //当前位置
         let targetY = top - 80    //目标位置
-        // let distance = (targetY-currentY)/20  //每次移动的位置
-        // let i = 0
-        // // 每隔一定时间间隔移动位置，速度足够快类似动画
-        // let scroll = setInterval(()=>{
-        // 	i = i + 1
-        // 	if(i == n){
-        // 		window.clearInterval(scroll)
-        // 	}
-        // 	window.scrollTo(0,currentY+ i*distance)
-        // },duration)
-
         // 使用tweenjs缓动效果
         const coords = { y: currentY };
         const tween = new TWEEN.Tween(coords)
@@ -83,9 +67,7 @@ for (let i = 0; i < aTags.length; i++) {
             })
             .start();
     }
-
 }
-
 			var mySwiper = new Swiper ('.swiper-container', {
 			  // Optional parameters
 			//   direction: 'vertical',
