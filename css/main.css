@@ -8,15 +8,16 @@ h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 /* 清除浮动，对父元素进行清除 */
 .clearfix::after{ content: ''; display: block; clear: both; }
 
-[data-menu].offset{
-    transform: translateY(100px);
-}
-
-[data-menu]{
-    transform: translateY(0);
-    transition: all 0.5s ;
-}
-
+[data-menu].offset{ transform: translateY(100px); }
+[data-menu]{ transform: translateY(0); transition: all 0.5s ; }
+.icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
+.loading { width: 200px; height: 200px; position: relative; }
+.loading::before,
+.loading::after { content: ''; position: absolute; width: 10px; height: 10px; background: black; border-radius: 50%; top: 0; left: 0; bottom: 0; right: 0; margin: auto; animation: s 1.5s linear infinite; }
+.loading::after { content: ''; animation-delay: 0.75s; }
+@keyframes s { 0% { width: 0; height: 0; opacity: 1; } 100% { width: 100px; height: 100px; opacity: 0; } }
+.site-welcome { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; justify-content: center; align-items: center; background: #888; z-index: 2; }
+.site-welcome.active { display: flex; }
 .topNavBar{ padding: 20px 0px 20px 0px; /* 脱离文档流 */ position: fixed; top:0px; left: 0px; width: 100%; transition: all 0.6s; color: #B7B7B7;}
 .topNavBar.sticky{background: white; padding: 8px 0; z-index: 1;
 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19); color:#3d4451;}
@@ -50,8 +51,7 @@ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19); color:#3d4451;}
 .userCard .text dl dt,
 .userCard .text dl dd{ float: left; padding: 5px 0; }
 .userCard .text dl dt{ width: 30%; font-weight: bold; }
-.userCard .text dl dd{
-    width: 70%; color: #9da0a7; } .userCard .pictureAndText{ padding: 50px; }
+.userCard .text dl dd{ width: 70%; color: #9da0a7; } .userCard .pictureAndText{ padding: 50px; }
 .userCard > footer.media{ background-color: #E6686A; text-align: center; }
 .userCard > footer.media > a{ border-radius: 50%; display: inline-block; width: 40px; line-height: 30px; padding: 5px 0; margin: 16px 10px; }
 .userCard > footer.media > a:hover{ background: #CF5D5F; }
@@ -64,36 +64,32 @@ body > main .selfIntroduction{ max-width: 928px; margin-left: auto; margin-right
 
 section.skills,
 section.portfolio{ max-width: 928px; margin-left: auto; margin-right: auto; margin-top: 60px; }
-section.skills >h2 ,
-section.portfolio >h2 { color: #3d4451; font-size: 28px; line-height: 1.2; font-weight: 600; text-align: center; }
+section.skills >h2,
+section.portfolio >h2,
+section.message >h2 { color: #3d4451; font-size: 28px; line-height: 1.2; font-weight: 600; text-align: center; }
 section.skills >ol { background: white; box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5); padding: 42px 50px 10px; margin-top: 20px; }
 section.skills >ol >li{ box-sizing: border-box; padding-right: 20px; width: 50%; float: left; }
 section.skills >ol >li > h3 { font-size: 14px; line-height: 1.1; padding-right:40px ; }
 
 section.skills .progressBar{ height: 4px; background: #FBE1E2; border-radius: 2px; margin: 4px 0 40px; border-radius: 2px; overflow: hidden;}
-section.skills .progressBar .progress{ background:#E8686A ; height: 100%; width: 80%; border-radius: 2px; 
-    transform: translateX(0);
-    transition: all 1s;
+section.skills .progressBar .progress{ background:#E8686A ; height: 100%; width: 80%; border-radius: 2px; transform: translateX(0); transition: all 1s; }
+section.skills.offset .progress{ transform: translateX(-100%); }
+section.portfolio{ text-align: center; } 
+section.portfolio .swiper-container { width:100%; height: 500px; margin-top:60px ;}
+section.portfolio .swiper-button-prev,.swiper-button-next{ width: 58px; height: 58px; right: 100%; left: auto; background: white; border-radius: 50%; }
+section.portfolio .swiper-button-next{ right: auto; left: 100%; }
+section.message{
+    max-width: 928px; margin-left: auto; margin-right: auto; margin-top: 60px; 
 }
-section.skills.offset .progress{
-    transform: translateX(-100%);
+section.message > ol#messageList{
+    margin: 30px auto;
+    background: #F4F4F4;
+    
 }
-section.portfolio{ text-align: center; }
-section.portfolio > nav{ text-align: center; display: inline-block; vertical-align: top; margin-top: 32px; }
-section.portfolio > nav > ol{ margin: 0 auto; display: inline-block; vertical-align: top; }
-section.portfolio > nav > ol >li{ float: left; margin-left:40px; cursor: pointer; }
-section.portfolio > nav > ol >li:first-child{ margin-left: 0; }
-section.portfolio > nav .bar{ height: 5px; background: white; margin-top: 5px; margin-bottom: 30px; border-radius: 2px; }
-section.portfolio > nav .bar .bar-inner{ height: 100%; background:#E8686A ; width: 15%; border-radius: 2px; transition: all 0.3s; }
-section.portfolio > nav .bar.state-1 .bar-inner{ height: 100%; background:#E8686A ; width: 16%; border-radius: 2px; }
-section.portfolio > nav .bar.state-2 .bar-inner{ height: 100%; background:#E8686A ; width: 24%; border-radius: 2px; margin-left: 60px; }
-section.portfolio > nav .bar.state-3 .bar-inner{ height: 100%; background:#E8686A ; width: 42%; border-radius: 2px; margin-left: 138px; }
-/* section.portfolio .works{ position: relative; height: 576px; margin-bottom: 80px; }
-section.portfolio .works .big{ position: absolute; top: 0; left: 0; }
-section.portfolio .works .small-1{ position: absolute; top: 0; left: 629px; }
-section.portfolio .works .small-2{ position: absolute; top: 298px; left: 629px; } */
 
-section.portfolio .swiper-container { width: 1000px; height: 576px; }
-section.portfolio .swiper-button-prev{
-    width: 4;
+
+section.message > ol#messageList > li {
+    border-top: 1px solid #DDDDDD ;
+    border-bottom: 1px solid #DDDDDD ;
+    padding:16px;
 }
