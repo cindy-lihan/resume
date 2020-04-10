@@ -6,8 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>我的简历主页</title>
-	<link rel="stylesheet" href="./css/swiper.min.css">
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./src/css/loading.css">
+	<link rel="stylesheet" href="./src/css/swiper.min.css">
+	<link rel="stylesheet" href="./src/css/main.css">
+	
 </head>
 
 <body>
@@ -63,7 +65,7 @@
 		<div data-menu id='siteAbout' class="userCard">
 			<div class="pictureAndText clearfix">
 				<div class="picture">
-					<img src="../img/avatar.jpg" width=299 height=347 alt="头像" />
+					<img src="./src/img/avatar.jpg" width=299 height=347 alt="头像" />
 				</div>
 				<div class="text">
 					<span class="welcome">Hello
@@ -104,7 +106,7 @@
 			</footer>
 		</div>
 		<p style="text-align: center;">
-			<a class="downloadResume" href="./file/resume.docx" download="resume-lihan">下载 PDF 简历</a>
+			<a class="downloadResume" href="./src/file/resume.docx" download="resume-lihan">下载 PDF 简历</a>
 		</p>
 		<p class="selfIntroduction">
 			李寒：Java开发工程师、前端开发萌新<br>
@@ -167,13 +169,13 @@
 			<div class="swiper-wrapper">
 				<!-- Slides -->
 				<div class="swiper-slide">
-					<img src="./img/nav.png" alt="作品1">
+					<img src="./src/img/nav.png" alt="作品1">
 				</div>
 				<div class="swiper-slide">
-					<img src="./img/canvas.jpg" alt="作品2">
+					<img src="./src/img/canvas.jpg" alt="作品2">
 				</div>
 				<div class="swiper-slide">
-					<img src="./img/work_1.jpg" alt="作品2">
+					<img src="./src/img/work_1.jpg" alt="作品2">
 				</div>
 			</div>
 		</div>
@@ -201,16 +203,21 @@
 	</section>
 	<script src="//at.alicdn.com/t/font_1516561_scq6j4wqot.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-	<script src="./js/swiper.min.js"></script>
+	<script src="./src/js/swiper.min.js"></script>
 	<!-- 存储服务 -->
 	<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.2.0/dist/av-min.js"></script>
+	
+	<!-- 基础封装 -->
+	<script src="./src/js/base/model.js"></script>
+	<script src="./src/js/base/view.js"></script>
+	<script src="./src/js/base/controller.js"></script>
 	<!-- 模块化 -->
-	<script src="./js/init-swiper.js"></script>
-	<script src="./js/auto-slide-up.js"></script>
-	<script src="./js/sticky-topbar.js"></script>
-	<script src="./js/smooth-navigation.js"></script>
-	<script src="./js/main.js"></script>
-	<script src="./js/message.js"></script>
+	<script src="./src/js/init-swiper.js"></script>
+	<script src="./src/js/auto-slide-up.js"></script>
+	<script src="./src/js/sticky-topbar.js"></script>
+	<script src="./src/js/smooth-navigation.js"></script>
+	<script src="./src/js/main.js"></script>
+	<script src="./src/js/message.js"></script>
 </body>
 
 </html>
